@@ -4,9 +4,6 @@
 /**
  * main- run the program
  *
- * @argc: ...
- * @argv: ...
- *
  * Return: 0 (success)
  */
 int main(int argc, char **argv)
