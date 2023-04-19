@@ -1,34 +1,33 @@
 #include "3-calc.h"
-#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main- run the program
- *
- * Return: 0 (success)
- */
-int main(int argc, char **argv)
+  * main - ...
+  * @argc: ...
+  * @argv: ...
+  *
+  * Return: ...
+  */
+int main(int argc, char *argv[])
 {
-	int a, b;
-	char *o;
+	int (*oprt)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
-	a = atoi(argv[1]);
-	o = argv[2];
-	b = atoi(argv[3]);
+	oprt = get_op_func(argv[2]);
 
-
-	if (get_op_func(o) == NULL || argv[2][1])
+	if (!oprt)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 
-	printf("%d\n", get_op_func(o)(a, b));
-
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
+

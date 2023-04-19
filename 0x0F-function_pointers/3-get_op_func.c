@@ -3,8 +3,8 @@
 #include <string.h>
 
 /**
-  * get_op_func - it contains a function which select the right function execute operation by user
-  * @s: operator to pass an argument to the program
+  * get_op_func - ...
+  * @s: ...
   *
   * Return: ...
   */
